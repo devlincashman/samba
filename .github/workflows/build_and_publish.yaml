@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "0 23 * * *"
 
 jobs:
   build_and_push:
@@ -28,7 +30,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ghcr.io/devlincashman/samba
-          tags: type=sha,enable=true,priority=100,prefix=,suffix=,format=short
+          tags: | 
+            type=sha,enable=true,priority=100,prefix=,suffix=,format=short
+            type=schedule,pattern=nightly
           flavor: latest=true
 
       - name: Build and push Docker image

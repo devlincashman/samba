@@ -2,7 +2,7 @@
 
 # Samba
 
-Samba docker container
+Samba docker container - this repo daily builds the latest alpine and samba release avaliable. Use the latest tag for frequent updates or by gitsha for a specific build date.
 
 # What is Samba?
 
