@@ -33,7 +33,6 @@ jobs:
           tags: | 
             type=sha,enable=true,priority=100,prefix=,suffix=,format=short
             type=schedule,pattern=nightly
-            type=schedule,pattern={{date 'YYYYMMDD'}}
           flavor: latest=true
 
       - name: Build and push Docker image
